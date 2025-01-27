@@ -1,0 +1,27 @@
+<h1>FAQ</h1>
+
+
+
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <mat-nav-list>
+        <mat-list-item routerLink="/account" routerLinkActive="active" >
+          Gestione Account
+        </mat-list-item>
+        <mat-list-item >
+          Come Ordinare
+        </mat-list-item>
+        <mat-list-item >
+          Informazioni sui Pagamenti
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+  
+
+  <!-- <app-footer></app-footer> -->

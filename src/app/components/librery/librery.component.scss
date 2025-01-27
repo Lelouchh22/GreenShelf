@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+#footer-logos{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    // border: 2px solid black
+    height: 10%;
+  }
+
+  #footer-infos{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: small;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:200;
+    border-top: 1px solid black;
+  }
+
+  #e-book-container{
+    width: 100%;
+    height: 30%;
+    // border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #suggestion{
+    font-family: "Playwrite AU SA", sans-serif;  
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    padding: 3vh;
+  }
+
+  .books{
+    display: flex;
+    justify-content: center;
+    padding: 1vhM;
+    align-items: center;
+    // border: 1px solid black;
+    width: 100%;
+    img{
+        width: 10vh;
+        height: 12vh;
+        padding: 1vh;
+    }
+  }
+
+  .body-container img{
+    width: 40vh;
+    height: 30vh ;
+  }
+
+  .body-container-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  
+  
+  #firstBodyText{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playwrite AU SA", sans-serif;
+    color: rgba(93, 182, 115, 0.89);
+    font-size: 30px;
+    -webkit-text-stroke:  0.3px black;
+    text-shadow: 0 0 10px rgba(164, 233, 164, 0.548), 0 0 20px rgba(164, 233, 164, 0.548), 0 0 30px white;
+    // border: 2px solid black;
+  }
+
+.button-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Passion+One:wght@400;700;900&display=swap');
+html body {
+  height: 100%;
+  width: 100%;
+
+}
+
+  .body-container{
+    // border: 3px solid black;
+    height: 100vh;
+    background-color: #FFF9DF;
+  }
+
+  .central-body{
+    display: flex;
+    // border: 2px solid red;
+    height: 40vh;
+    justify-content: center;
+    
+  }
+
+  .inside-central-body{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    // border: 2px solid black;
+    width: 80%;
+    align-items: center;
+  }
+
+  .central-body-img img{
+    width: 450px;
+    height: 450px;
+  }
+
+  .central-body-img{
+    display: flex;
+    justify-content: center;
+    // border: 2px solid green;
+    width: 50%;
+  }
+
+  .central-body-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .chisiamo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 8vh;
+    font-family: "Open Sans", serif;
+    
+  }
+
+  .central-low-body{
+    padding-top:30px;
+    // border: 3px solid red;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inside-central-low-body{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    // border: 3px solid blue;
+    font-family: "Open Sans", serif;
+    font-size: 2vh;
+  }
+  .inside-central-low-body img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .inside-central-low-body-icon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  

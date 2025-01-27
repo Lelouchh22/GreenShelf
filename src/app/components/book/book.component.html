@@ -1,0 +1,34 @@
+<mat-card class="book-card" appearance="outlined" *ngIf="book" (mouseenter)="toggleHoverState()"
+  (mouseleave)="resetCardState()" (click)="toggleClickState()"
+  [@hoverAnimation]="isHovered && !isClicked ? 'hovered' : 'notHovered'"
+  [@clickAnimation]="isClicked ? 'clicked' : 'notClicked'" (@clickAnimation.start)="resetCardState()">
+
+  <ng-container>
+
+    <div class="card-layout">
+      <div class="card-image">
+        <img mat-card-lg-image [src]="getImageUrl(book.work.cover_id)" alt="{{book.work.title}}">
+      </div>
+      
+      <div class="card-content">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title class="title">{{book.work.title}}</mat-card-title>
+            <mat-card-subtitle class="authors"  *ngIf="book.work.author_names">{{book.work.author_names}}</mat-card-subtitle>
+          </mat-card-title-group>
+        </mat-card-header>
+    
+        <mat-card-content class="card-icons-container">
+      
+          <div>
+            <img class="card-icons" src="assets/star.png" alt="">
+          <img class="card-icons" src="assets/thumb-up.png" alt="">
+          <img class="card-icons" src="assets/shopping-cart.png" alt="">
+          </div>
+        </mat-card-content>
+      </div>
+    </div>
+
+  </ng-container>
+
+</mat-card>

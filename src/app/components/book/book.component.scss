@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+.book-card {
+    width: 20vw;
+    height: fit-content;
+    
+    margin-bottom: 8px;
+    background-color: rgba(250, 170, 170, 0.192);
+    box-shadow: 0 0 40px white, 0 0 20px white, 0 0 30px white;  
+
+  }
+
+  .flipped-card-inner {
+    transform: rotateY(180deg);
+  }
+
+
+.card-layout{
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 2vh;
+  color: red;
+  -webkit-text-stroke:  0.001px rgba(59, 59, 59, 0.274);
+  font-family: "Playwrite AU SA", sans-serif;
+  text-shadow: 0 0 40px white, 0 0 20px white, 0 0 30px white;
+  padding-bottom: 1vh;
+
+}
+
+.description{
+  overflow-wrap: break-word; 
+  word-wrap: break-word;
+  hyphens: auto; 
+  font-size: small;
+  font-style: oblique;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  text-shadow: 0 0 40px white, 0 0 20px white, 0 0 30px white;  
+
+}
+
+.authors{
+  font-weight: bold; 
+  font-style:oblique;
+  font-size: 1.5vh; 
+  text-shadow: 0 0 40px white, 0 0 20px white, 0 0 30px white;  
+  padding-right:5px;
+}
+
+.card-icons{
+  width: 2vh;
+  height: 2vh;
+}
+.card-icons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items:flex-end;
+}

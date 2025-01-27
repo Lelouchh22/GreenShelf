@@ -1,0 +1,44 @@
+
+    <button mat-fab extended class="explore-button" routerLink="/homepage">
+        <h3>homepage</h3>
+    </button>
+
+    <!-- BODY -->
+    <div class="body-container">
+        <div class="body-container-img">
+            <img src="assets/libro-albero.jpg" alt="">
+        </div>
+        <div id="firstBodyText">Trova il libro perfetto per te</div>
+
+        <div class="button-search">
+            <mat-form-field>
+                <input matInput type="search" [(ngModel)]="searchtext" id="form1" class="form-control"
+                    placeholder="Search" aria label="search">
+                <button matError aria-label="Search">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+
+
+        
+        
+        
+        <mat-grid-list cols="3" class="my-grid-list" rowHeight="30vh">
+            <mat-grid-tile *ngFor="let book of booksList|filter:searchtext">
+                <app-book [book]="book"></app-book>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+    </div>
+    
+    <div class="pagination button-search">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <span>{{ currentPage }} </span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+
+    
+
+    
+ <!-- <app-footer></app-footer> -->
