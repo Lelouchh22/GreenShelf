@@ -5,8 +5,57 @@
 html body {
   height:100%;
   width: 100%;
-  background-color: red;
+}
 
+.faq-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43vh;
+  width: 100%;
+  // border: 2px solid black;
+  background-color: #FFF9DF;
+}
+
+.faq-img{
+  display: flex;
+  justify-content: center;
+  // border: 2px solid black;
+  width: 50%;
+  img{
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.faq-text{
+  h1{
+    font-family: "Playwrite AU SA", serif;
+    font-size: 5vh;
+  }
+  p{
+    font-family: "Open Sans", serif;
+    font-size: 2vh;
+  }
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 2vh;
+  align-items: center;
+}
+
+.slogan-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 42vh;
+  font-family: "Playwrite AU SA", serif;
+  font-size: 8vh;
+  color: #5e9c5973;
+  background-color: #FFF9DF; ;
+  // border: 2px solid black;
 }
 .sidenav-box{
   display: flex;
@@ -20,7 +69,7 @@ html body {
 .sidenav-container {
   display: flex;
   height: 70vh; 
-  width: 80%;
+  width: 50%;
   border: 2px solid rgba(0, 0, 0, 0.322);
   border-radius: 20px;
   opacity: 0.99;

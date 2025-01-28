@@ -1,5 +1,22 @@
-<div class="sidenav-box"
->
+<div class="faq-container">
+
+  <div class="faq-text">
+    <h1>Frequently Asked Questions</h1>
+    <p>Welcome to our FAQ page! Here you'll find answers to the most common questions about our products and services. We’ve gathered information to help you resolve any doubts and make your experience with us even better. If you can’t find what you’re looking for, feel free to reach out to our support team. We're here to help!</p>
+  </div>
+
+  <div class="faq-img">
+    <img src="assets/Wavy_Bus-22_Single-03.png" alt="">
+  </div>
+  
+</div>
+
+
+<div class="slogan-container">
+  <div class="slogan">Share Books, Save the Planet.</div>
+</div>
+
+<div class="sidenav-box">
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode="side" opened class="sidenav">
       <mat-nav-list>
@@ -20,7 +37,6 @@
       <app-orders *ngIf="selectedSection === 'order'"></app-orders>
       <app-payments *ngIf="selectedSection === 'payments'"></app-payments>
     </mat-sidenav-content>
-
 
   </mat-sidenav-container>
 </div>
