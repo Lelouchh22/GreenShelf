@@ -4,7 +4,6 @@ import { LibreryComponent } from './components/librery/librery.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { FAQComponent } from './components/faq/faq.component';
 import { SubscriptionsComponent } from './components/subscriptions/subscriptions.component';
-import { AccountComponent } from './components/account/account.component';
 
 export const routes: Routes = [
   {
@@ -37,9 +36,6 @@ export const routes: Routes = [
     component: SubscriptionsComponent,
   },
   
-  {
-    path: 'account',
-    component: AccountComponent,
-  },
+
 
 ];

@@ -1,27 +1,26 @@
-<h1>FAQ</h1>
-
-
-
-<mat-sidenav-container class="sidenav-container">
+<div class="sidenav-box"
+>
+  <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode="side" opened class="sidenav">
       <mat-nav-list>
-        <mat-list-item routerLink="/account" routerLinkActive="active" >
-          Gestione Account
+        <mat-list-item (click)="selectSection('account')">
+          Account Management
         </mat-list-item>
-        <mat-list-item >
-          Come Ordinare
+        <mat-list-item (click)="selectSection('order')">
+          Orders
         </mat-list-item>
-        <mat-list-item >
-          Informazioni sui Pagamenti
+        <mat-list-item (click)="selectSection('payments')">
+          Infos about payments
         </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
-  
-    <mat-sidenav-content>
-        <router-outlet></router-outlet>
+
+    <mat-sidenav-content class="sidenav-content">
+      <app-account *ngIf="selectedSection === 'account'"></app-account>
+      <app-orders *ngIf="selectedSection === 'order'"></app-orders>
+      <app-payments *ngIf="selectedSection === 'payments'"></app-payments>
     </mat-sidenav-content>
 
-  </mat-sidenav-container>
-  
 
-  <!-- <app-footer></app-footer> -->
+  </mat-sidenav-container>
+</div>

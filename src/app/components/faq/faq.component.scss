@@ -3,17 +3,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Passion+One:wght@400;700;900&display=swap');
 
 html body {
-  height: 100%;
+  height:100%;
   width: 100%;
+  background-color: red;
 
 }
-
+.sidenav-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  background-color: #FFF9DF;
+  // border: 2px solid black;
+}
 .sidenav-container {
   display: flex;
-  height: 50vh; 
+  height: 70vh; 
+  width: 80%;
+  border: 2px solid rgba(0, 0, 0, 0.322);
+  border-radius: 20px;
+  opacity: 0.99;
 }
 
-/* Sidebar */
 .sidenav {
   width: 250px;
   background-color: #f4f4f4;
@@ -59,5 +71,15 @@ mat-sidenav-content {
   flex-grow: 1; 
   overflow-y: auto; 
   padding: 16px;
+}
+
+.sidenav-content{
+  display: flex;
+  justify-content: left;
+  // border: 2px solid black;
+}
+
+.accordion-content{
+  width: 100%;
 }
 
