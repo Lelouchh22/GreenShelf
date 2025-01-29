@@ -14,7 +14,6 @@ html body {
   height: 43vh;
   width: 100%;
   // border: 2px solid black;
-  background-color: #FFF9DF;
 }
 
 .faq-img{
@@ -54,7 +53,6 @@ html body {
   font-family: "Playwrite AU SA", serif;
   font-size: 8vh;
   color: #5e9c5973;
-  background-color: #FFF9DF; ;
   // border: 2px solid black;
 }
 .sidenav-box{
@@ -62,26 +60,24 @@ html body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90%;
-  background-color: #FFF9DF;
+  height: 70%;
   // border: 2px solid black;
 }
 .sidenav-container {
   display: flex;
   height: 70vh; 
   width: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.322);
-  border-radius: 20px;
+  justify-content:space-between;
+  margin: 20px;
   opacity: 0.99;
 }
 
 .sidenav {
   width: 250px;
-  background-color: #f4f4f4;
+  background-color: #FFF9DF;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border-right: 1px solid #ddd;
+  padding-right: 10vh;
   padding: 0;
 }
 
@@ -100,14 +96,10 @@ html body {
 }
 
 .mat-list-item.active {
-  background-color: #e0e0e0;
   font-weight: bold;
   border-radius: 4px;
 }
 
-.mat-list-item:hover {
-  background-color: #dcdcdc;
-}
 
 mat-toolbar {
   position: sticky;
@@ -123,6 +115,7 @@ mat-sidenav-content {
 }
 
 .sidenav-content{
+  background-color: #FFF9DF;
   display: flex;
   justify-content: left;
   // border: 2px solid black;
@@ -132,3 +125,18 @@ mat-sidenav-content {
   width: 100%;
 }
 
+mat-list-item{
+  margin-top: 3vh;
+  background-color: #FAF9FD;
+}
+
+
+.faq-help{
+  height: 20vh;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}

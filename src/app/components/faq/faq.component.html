@@ -1,42 +1,49 @@
-<div class="faq-container">
+<div style="background-color: #FFF9DF;">
+  <div class="faq-container">
 
-  <div class="faq-text">
-    <h1>Frequently Asked Questions</h1>
-    <p>Welcome to our FAQ page! Here you'll find answers to the most common questions about our products and services. We’ve gathered information to help you resolve any doubts and make your experience with us even better. If you can’t find what you’re looking for, feel free to reach out to our support team. We're here to help!</p>
-  </div>
-
-  <div class="faq-img">
-    <img src="assets/Wavy_Bus-22_Single-03.png" alt="">
+    <div class="faq-text">
+      <h1>Frequently Asked Questions</h1>
+      <p>Welcome to our FAQ page! Here you'll find answers to the most common questions about our products and services. We’ve gathered information to help you resolve any doubts and make your experience with us even better. If you can’t find what you’re looking for, feel free to reach out to our support team. We're here to help!</p>
+    </div>
+  
+    <div class="faq-img">
+      <img src="assets/Wavy_Bus-22_Single-03.png" alt="">
+    </div>
+    
   </div>
   
-</div>
-
-
-<div class="slogan-container">
-  <div class="slogan">Share Books, Save the Planet.</div>
-</div>
-
-<div class="sidenav-box">
-  <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav mode="side" opened class="sidenav">
-      <mat-nav-list>
-        <mat-list-item (click)="selectSection('account')">
-          Account Management
-        </mat-list-item>
-        <mat-list-item (click)="selectSection('order')">
-          Orders
-        </mat-list-item>
-        <mat-list-item (click)="selectSection('payments')">
-          Infos about payments
-        </mat-list-item>
-      </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content class="sidenav-content">
-      <app-account *ngIf="selectedSection === 'account'"></app-account>
-      <app-orders *ngIf="selectedSection === 'order'"></app-orders>
-      <app-payments *ngIf="selectedSection === 'payments'"></app-payments>
-    </mat-sidenav-content>
-
-  </mat-sidenav-container>
+  
+  <div class="slogan-container">
+    <div class="slogan">Share Books, Save the Planet.</div>
+  </div>
+  
+  <div class="sidenav-box">
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #sidenav mode="side" opened class="sidenav">
+        <mat-nav-list>
+          <mat-list-item (click)="selectSection('account')">
+            <div style="font-weight: 550;">Account Management</div>
+          </mat-list-item>
+          <mat-list-item (click)="selectSection('order')">
+            <div style="font-weight: 550;">Orders</div>
+          </mat-list-item>
+          <mat-list-item (click)="selectSection('payments')">
+            <div style="font-weight: 550;">Info about payments</div>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-sidenav>
+  
+      <mat-sidenav-content class="sidenav-content">
+        <app-account *ngIf="selectedSection === 'account'"></app-account>
+        <app-orders *ngIf="selectedSection === 'order'"></app-orders>
+        <app-payments *ngIf="selectedSection === 'payments'"></app-payments>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  
+  </div>
+  
+  <div class="faq-help">
+    <h1 style="font-size: 3vh;">Still need help?</h1>
+    <a style="font-size: 2vh;"  href="mailto: testGreenshelf@gmail.com">Contact us</a>
+  </div>
 </div>
