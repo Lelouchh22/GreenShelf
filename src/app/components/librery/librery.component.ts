@@ -12,44 +12,34 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, 
 import { FilterPipe } from "../../filter.pipe";
 import { ToolbarComponent } from "../toolbar/toolbar.component";
 import { FooterComponent } from "../../footer/footer.component";
-@Component({
-  selector: 'app-librery',
-  imports: [FormsModule, ReactiveFormsModule, MatIconModule, MatInputModule, RouterLink, MatGridListModule, BookComponent, CommonModule, MatFormFieldModule, FilterPipe, ToolbarComponent, FooterComponent],
-  templateUrl: './librery.component.html',
-  styleUrl: './librery.component.scss'
-})
-export class LibreryComponent implements OnInit{
-searchtext:any;
-currentPage: number = 1;
-totalBooks: number = 0;
-booksPerPage: number = 18;
-totalPages: number = 0;
-booksList: Book[] = [];
 
-  constructor(private bookService: BookService, private fb: FormBuilder) {}
+@Component({
+  imports: [FormsModule, ReactiveFormsModule, MatIconModule, MatInputModule, RouterLink, MatGridListModule, BookComponent, CommonModule, MatFormFieldModule, FilterPipe, ToolbarComponent, FooterComponent],
+  selector: 'app-librery',
+  templateUrl: './librery.component.html',
+  styleUrls: ['./librery.component.scss']
+})
+export class LibreryComponent implements OnInit {
+  searchtext: any;
+  currentPage: number = 1;
+  totalBooks: number = 0;
+  booksPerPage: number = 18;
+  totalPages: number = 0;
+  booksList: Book[] = [];
+
+  constructor(private bookService: BookService) {
+    
+  }
 
   ngOnInit(): void {
-    
-    this.loadBooks()
+    this.loadBooks();
   }
 
   loadBooks() {
-    this.bookService.getBooks(this.currentPage, this.booksPerPage).subscribe(
-      // data => {
-      //   this.booksList = data.items;
-      //   console.log(this.booksList)
-      // },
-
+    this.bookService.getBooks().subscribe(
       data => {
-        if (data.reading_log_entries && data.reading_log_entries.length > 0) {
-          this.booksList = data.reading_log_entries;
-          this.totalBooks = data.numFound;
-        this.totalPages = Math.ceil(this.totalBooks / this.booksPerPage); // Calcola il numero di pagine
-          // console.log(this.booksList)
-        } else {
-          console.log('No books found');
-          this.booksList = [];
-        }
+        console.log(data);
+        this.booksList = data;
       },
       err => console.log('There is an error', err)
     );
@@ -58,29 +48,14 @@ booksList: Book[] = [];
   nextPage() {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
-      console.log('Current Page (next):', this.currentPage);  // Verifica la pagina corrente
-      this.loadBooks();  // Carica i libri per la nuova pagina
+      this.loadBooks();
     }
   }
 
-  // Passa alla pagina precedente
   previousPage() {
     if (this.currentPage > 1) {
       this.currentPage--;
-      console.log('Current Page (previous):', this.currentPage);  // Verifica la pagina corrente
-      this.loadBooks();  // Carica i libri per la pagina precedente
+      this.loadBooks();
     }
   }
-  
-
-
-
-
-  
-
-
-  
-
-
-  
 }

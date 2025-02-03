@@ -50,7 +50,7 @@ export class HomepageComponent {
     
     this.slides = [
       { src: 'assets/1599948.jpg', title: 'A portal for readers', subtitle: 'Find new books' },
-      { src: 'assets/dcFwnop.jpg', title: 'Ecology', subtitle: 'We care about our planet' }
+      { src: 'assets/dcFwnop.jpg', title: 'Ecology', subtitle: 'We care about our planet' },
     ];
 
     this.ebook = [
